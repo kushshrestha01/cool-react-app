@@ -9,7 +9,7 @@ Parameters:
     Default: kushshrestha01
   GithubRepo:
     Type: String
-    Default: cool-react
+    Default: cool-react-app
   GithubOAuthToken:
     Type: String
     Default: MyGitHubOAuthToken
