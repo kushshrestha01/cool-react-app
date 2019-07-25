@@ -2,11 +2,11 @@ AWSTemplateFormatVersion: 2010-09-09
 Parameters:
   ProjectSource:
     Type: String
-    Default: https://github.com/kushshrestha01/cool-react-app
+    Default: https://github.com/mnfmnfm/cool-react
     Description: "Source control URL (e.g. Github)"
   GithubOwner:
     Type: String
-    Default: kushshrestha01
+    Default: mnfmnfm
   GithubRepo:
     Type: String
     Default: cool-react
@@ -40,7 +40,7 @@ Resources:
                 Owner: !Ref GithubOwner
                 Repo: !Ref GithubRepo
                 Branch: master
-                OAuthToken: GithubOAuthToken
+                OAuthToken: !Ref GithubOAuthToken
         -
           Name: Build
           Actions:
@@ -206,4 +206,3 @@ Resources:
             QueryString: true
           TargetOriginId: !Ref coolReactBucket
           ViewerProtocolPolicy: "redirect-to-https"
-          
